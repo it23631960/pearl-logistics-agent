@@ -37,12 +37,12 @@ const MainContent = () => {
   const hideHeaderNavRoutes = ["/login"];
   const showLayout = !hideHeaderNavRoutes.includes(location.pathname);
 
-  // useEffect(() => {
-  //   const token = sessionStorage.getItem("userData");
-  //   if (!token && location.pathname !== "/login") {
-  //     navigate("/login");
-  //   }
-  // }, [location, navigate]);
+  useEffect(() => {
+ const token = sessionStorage.getItem("userData");
+    if (!token && location.pathname !== "/login") {
+      navigate("/login");
+    }
+  }, [location, navigate]);
 
   return (
     <>
